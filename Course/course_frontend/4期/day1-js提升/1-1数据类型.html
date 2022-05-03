@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ////////////////////一、简单数据类型////////////////
+        //1、字符串类型String
+        var name = '张三'
+        //2、定义一个数字类型(Number)
+        var age = 88
+        //3、定义一个undefined类型变量
+        var salary = undefined
+        //4、定义一个null类型变量
+        var sex = null
+        //5、是否已婚(Boolean)
+        var married = false
+        //6、Symbol(独一无二)
+        var symbolA = Symbol('说明1')
+        var symbolB = Symbol('说明1')
+        console.log(symbolA == symbolB)  //打印出来为false
+        //7、大整数--这个是当数字过长时，最后面的数会失去精度，加n就不会失去精度
+        var idCard = 895347875834788   //会失去精度
+        var idCard2 = 895347875834788n  //不会失去精度
+
+        ////////////////////二、复杂数据类型////////////////
+        //1、对象
+        var obj = {
+            name: '张三',
+            age: 99,
+            sing: function(){
+                console.log('好听')
+            }
+        }
+        obj.address = 'aaa'
+        console.log(obj)
+
+        //2、数组
+        var books = ['语文','数学']
+        console.log(books)
+
+        //3、函数
+        var add = function(num1,num2){
+            return num1 + num2
+        }
+        console.log(add(1,2))
+
+        //4、日期
+        var date1 = new Date()
+        console.log(date1.getFullYear(),date1.getMonth(),date1.getDate())  //获取当前年，当前月，当前日
+
+        //5、Map
+        var map1 = new Map();
+        map1.set('name','张三')   //相当于往map1这个变量新增key，value
+        map1.set('age',80)
+        console.log(map1)
+        map1.delete('age')  //删除age这个key和值
+        console.log(map1)
+        console.log(map1.get('name'))  //获取name这个key的值
+
+        //6、Set
+        var set1 = new Set();
+        set1.add('张三')
+        set1.add('李四')
+        set1.add('张三')
+        console.log(set1) //只会输入‘张三’和‘李四’，因为set对象会做去重
+        console.log(set1.keys())  
+        //总结，Map/Set都需要New关键字来创建，都可以用数组来初始化。Map用二维数组，Set用一维数组。或者直接创建一个空也可以。
+        //Map插入用set，Set插入用add
+        //在Set中，没有重复的key
+
+        //7、正则  第一个参数为模式，第二个参数为修饰符，i为忽略大小写
+        var reg = new RegExp('^0571');
+        console.log(reg.test('0571-99008877'))   //检索字符串中的指定值
+
+    </script>
+</body>
+</html>

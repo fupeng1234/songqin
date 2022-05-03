@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var与let区别</title>
+</head>
+<body>
+    <script>
+        // 1、var与let变量作用域
+        {
+            var a = 10;
+            let b = 1;
+        }
+        console.log(a)   //var变量作用域为全局
+        console.log(b)   //let作用域仅在代码块中有效
+
+        // 2、变量的提升
+        // 2.1、var变量
+        console.log(dog);  //输出:undefined
+        var dog = '三毛'   
+
+        //这里var会把上面代码转变为：
+        var dog
+        console.log(dog);
+        dog = '三毛'
+
+        //2.2、let变量
+        console.log(duck);   //输出：Uncaught ReferenceError:duck is not defined
+        let duck = '小唐'    //let就不会出现把变量提升行为
+        
+        //3、变量的重复声明
+        //3.1、正常
+        function test1(){
+            var a = 1;
+            var a = 2;   //var重复赋值的时候不会报错，会被最新的覆盖
+            console.log(a);
+        }
+        test1()   
+        function test2(){
+            var b = 10;
+            let b = 20;  //用let重复赋值的时候会报错，Identifier 'b' has already been declared
+            console.log(b);
+        }
+        test2()
+        function test3(){
+            let c = 100;
+            let c = 200;
+            console.log(c);  //用let重复赋值的时候会报错,Identifier 'c' has already been declared
+        }
+        test3()
+    </script>
+    
+</body>
+</html>

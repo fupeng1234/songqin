@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1、const声明基本数据类型---const是用来声明常量的
+        const PI = 3.14
+        console.log(PI)
+        PI = 3.1415  //会报错，值不能变
+        //const songqin //会报错，const 声明必须初始化
+
+        //2、const声明对象
+        const obj = {}; 
+        obj.name = '张三';
+        obj.age = 30;
+        console.log(obj);   //会正常输出，因为这里没有去改变obj的引用地址，只是增加内容
+        obj = {name:'晓旭'}  //报错，不能将obj指向另一个对象，这里相当于会把引用地址更改
+
+        //3、const声明数组
+        const message = [];
+        message.push('Hello');
+        message.push('Mr Fan');
+        console.log(message.length);  //正常输出2
+        message = ['Dave']   //报错，不能将另一个数组赋值给message,原理同第2点的对象一致
+    </script>
+</body>
+</html>

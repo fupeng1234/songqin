@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js事件与事件对象</title>
+</head>
+<body>
+    <h2>1.onclick鼠标点击事件</h2>
+    <button onclick="doSave1()">保存1</button>
+    <h2>2.onkeyup键盘弹起</h2>
+    <p><input type="text" onkeyup="doKeyup()"></p>
+    <h2>3.onchange文本改变事件</h2>
+    <p>
+        <select onchange="doChange(this.value)">
+            <option value="1">男</option>
+            <option value="2">女</option>      
+        </select>
+    </p>
+    
+</body>
+<script>
+    function doSave1(){
+        console.log(event)
+        console.log("dosave1方法被调用")
+    }
+    function doKeyup(){
+        console.log("doKeyup方法被调用")
+    }
+    function doChange(id){
+        console.log(id)
+        console.log("doChange方法被调用")
+    }
+</script>
+</html>

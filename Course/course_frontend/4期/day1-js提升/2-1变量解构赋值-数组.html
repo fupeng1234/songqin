@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            // //1.模式匹配
+            let [a,b,c] = [10,20,30];
+            console.log('a=' + a);
+            console.log('b=' + b);
+            console.log('c=' + c);
+            //2.数组嵌套方式
+            let [a1,[[b1],c1]] = [1,[[2],3]]
+            console.log('a1=' + a1);
+            console.log('b1=' + b1);
+            console.log('c1=' + c1);
+            //3.不完全解构
+            let [a2, ,c2]= [1,2,3];
+            console.log('a2=' + a2);
+            console.log('c2=' + c2);
+
+            let [a3,b3,c3] = [10,20];
+            console.log('a3=' + a3);
+            console.log('b3=' + b3);
+            console.log('c3=' + c3);
+            // 4.使用扩展运算符解构(...)
+            let [a4,b4,...c4] = [1,2,3,4,5,6,7,8];
+            console.log('a4=' + a4);
+            console.log('b4=' + b4);
+            console.log('c4=' + c4);   //从第三位开始都赋值给了c4
+            // 5.含有默认值的解构
+            let [a5 = 1,b5 = 20,c5 = 30] = [10,undefined];
+            console.log('a5=' + a5);
+            console.log('b5=' + b5);
+            console.log('c5=' + c5);   //赋值优先，如果没有值是undefined或为空的，默认值优先
+            //6.字符串解构处理(顺带讲一下)
+            let [a6,b6,c6] = 'Hello';
+            console.log('a6=' + a6);
+            console.log('b6=' + b6);
+            console.log('c6=' + c6); 
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    ///////////////////////////1////////////////////////////
+    // 函数1-转化后
+    const student1 = function () {
+        return { name: '张三', age: 19 }
+    }
+    // 函数1-转化后
+    const student2 = () => {
+        return { name: '张三', age: 19 }
+    }
+    console.log(student1())
+    console.log(student2())
+    console.log(student2().name)
+    ///////////////////////////2////////////////////////////
+    // 函数2-转化前
+    const say1 = function (message) {
+        return `他说：${message}`
+    }
+    // 函数2-转化后
+    const say2 = (message) => {
+        return `他说：${message}`
+    }
+    console.log(say1('今晚吃鸡！'))
+    console.log(say2('今晚吃鸡！'))
+
+    ///////////////////////////3////////////////////////////
+
+    // 函数3-转化前
+    const add1 = function (a, b) {
+        console.log(`您传入的参数分别是：${a}、${b}`)
+        return a + b
+    }
+
+    // 函数3=转化后
+    const add2 = (a, b) => {
+        console.log(`您传入的参数分别是：${a}、${b}`)
+        return a + b
+    }
+    console.log(add1(30, 20))
+    console.log(add2(30, 20))
+    </script>
+</body>
+</html>

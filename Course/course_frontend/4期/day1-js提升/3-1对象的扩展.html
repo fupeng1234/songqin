@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.属性简写--当属性名和值的变量名相同时，触发对象的属性简写
+        let name = '张三'
+        let age = 19
+        var person = {
+            name,
+            age,
+            married: true,
+            salary: null,
+            eat: function(){
+                return '三屯'
+            },
+            hobby: ['看书','打篮球']
+        }
+        console.log(person.name)
+        console.log(person.age)
+        // console.log(person.eat())
+
+        // 2.方法的简写--方法的简写是无条件的
+        let name = '张三'
+        let age = 19
+        var person = {
+            name,
+            age,
+            married: true,
+            salary: null,
+            eat: function(){
+                return '三屯'
+            },
+            eat2(){
+                return '三屯2'
+            },
+            hobby: ['看书','打篮球']
+        }
+        console.log(person.name)
+        console.log(person.age)
+        console.log(person.eat2())
+
+        //3.扩展运算符
+        //3.1扩展符用于对象，进行对象的可遍历属性的拷贝
+        let z = {a:10, b: 20}
+        let n = {...z,c: 30}
+        console.log(n)  //输出：{a:10,b:20,c:30}
+
+        //3.2扩展运算符用于合并两个对象
+        let a = {a:10,b:20}
+        let b = {x:30,y:40}
+        let ab = {...a,...b}
+        console.log(ab)
+        
+    </script>
+</body>
+</html>

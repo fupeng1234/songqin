@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //模版字符串用 反引号(`)--就是键盘上～号的那个键表示
+        //1.模板字符串
+        var idCard = '360424198612121539'
+        var str0 = '身份证号码' + idCard;  // 没有模板字符串之前，我们这样做
+        var str1 = `身份证号码${idCard}`; // 有了模板字符串后，我们可以这样做，更优雅了
+        console.log(str0);
+        console.log(str1);
+        //2.转义反引号
+        var str2 = `这里是中央人民广播电台\`中国之声\`两会特别节目《xx》，我是主持人xx。`;
+        console.log(str2);
+        //3.多行字符串
+        var str = `这里是中央人民广播电台中国之声两会特别节目《xx》，
+                   我是主持人xx。` ;
+        console.log(str);
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 简化规则（看三维  参数、函数体、return啥）：
+        1. 只有一个参数时，（）可以省略
+        2. 函数体只有一条返回语句时，{ } 和return 都可以省略，要同时省略
+        3. 函数体只有一句话时，{ }可以省略
+        4. 如果函数返回一个对象，则需要用( ) 包住这个对象，因为对象用到了{ }
+·       5. 如果没有参数时，( ) 必须写
+    */
+    ///////////////////////////1////////////////////////////
+    // 函数1-简化前
+    const student2 = () => {
+        return { name: '张三', age: 19 }
+    }
+    // 函数1-简化后
+    const student3 = () => ({ name: '张三', age: 19 })
+    console.log(student2())
+    console.log(student2().name)
+    console.log(student3())
+
+    ///////////////////////////2////////////////////////////
+    // 函数2-简化前
+    const say2 = (message) => {
+        return `他说：${message}`
+    }
+
+    // 函数2-简化后
+    const say3 = message => `他说：${message}`
+
+    console.log(say2('今晚吃鸡！'))
+    console.log(say3('今晚吃鸡！'))
+
+    ///////////////////////////3////////////////////////////
+    // 函数3-简化前
+    const add2 = (a, b) => {
+        console.log(`您传入的参数分别是：${a}、${b}`)
+        return a + b
+    }
+
+    // 函数3=简化后
+    const add3 = (a, b) => {
+        console.log(`您传入的参数分别是：${a}、${b}`)
+        return a + b
+    }
+    console.log(add2(30, 20))
+    console.log(add3(30, 20))
+    
+    </script>
+</body>
+</html>

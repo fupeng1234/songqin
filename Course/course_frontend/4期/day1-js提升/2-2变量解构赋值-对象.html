@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            //1.基本形式
+            let {name: name0,age: age0} = {name: '张三',age: 25};
+            console.log('name0=' + name0);
+            console.log('age0=' + age0);
+
+            //2.简化形式
+            let {name1,age1} = {name1:'李四',age1: 29};
+            console.log('name1=' + name1);
+            console.log('age1=' + age1);
+
+            //3.和位置无关
+            let {age2,name2} = {name2: '王武',age2:32};
+            console.log('name2=' + name2)
+            console.log('age2=' + age2)
+
+            //4.不完全解构
+            let {name3,age3} = {name3:'麻溜'};
+            console.log('name3=' + name3);
+            console.log('age3=' + age3);
+        }
+    </script>
+</body>
+</html>

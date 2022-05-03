@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log("开始学习前端课程")
+        //1、作用域
+        {
+            var sq1 = "hello sq1"    //声明变量---var方式
+            let sq2 = "hello sq2"    //声明变量---let方式
+        }
+        console.log(sq1)   //对象之外 var的作用域区间是全局的
+        console.log(sq2)   //对象之外 let有明确的作用域
+
+        //2、变量的提升-----使用var声明变量如果在打印的后面，js就会把变量var haiwei 提到前面来，赋值在后面，这就是变量的提升
+        console.log(haiwei)   //未定义--直接写这一句的时候会报错：haiwei is not  defined----haiwei没有被定义
+        var haiwei = "测开讲师"   //var会变量提升
+        //前面的相当于
+        var haiwei    //先声明  ---也是未定义--但是是声明了但是未赋值，打印的时候就会提示：undefined
+        console.log(haiwei)    //再使用
+        haiwei = "测开讲师"    //再赋值
+
+        console.log(haiwei)
+        let haiwei = "测开讲师"   //let不会进行变量提升
+
+        //3、变量的重复声明
+        function f1(){
+            let a = 1
+            var a = 2
+            console.log(a)
+        }
+        f1()
+
+        function f2(arg){
+            let arg = "hello"
+            var arg = "hello"   //var可以重复声明容易出bug
+            console.log(arg)
+        }
+        f2("哈哈哈哈哈")
+
+        //定义常量
+        const name = 'haiwei'  //定义常量后保证引用不可变，如定义字符串、数字后值就不可改
+        name = 'hh'   
+        console.log(name)  
+
+        const a_list = []  //定义空列表，定义常量后保证引用不可变，但是可以更改引用对象的内容
+        a_list = [200,300,400]   //可以更改引用对象的内容，但是不能重新进行赋值
+        a_list.push(100)   //在列表里面添加值
+        console.log(a_list)  
+
+        const obj = {}  //定义一个空对象
+        obj.name = '小明'   //这样可以，因为没有重新赋值，只是引用的时候更改了内容
+        console.log(obj) 
+
+        const obj2  //这种写法会报错，用const声明变量必须赋值
+        obj2 = {name:"小红"}
+
+    </script>
+</body>
+</html>
