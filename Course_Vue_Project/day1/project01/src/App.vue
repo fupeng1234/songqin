@@ -4,8 +4,8 @@
          to属性，值可以是字符串，也可以是对象
          可以通过v-bind(缩写是:)绑定to这个属性,
          query:{id:123,name:'张三'}   这样会把参数加到链接后面，只能用query这个词-->
-    <router-link to="/">Home</router-link> |
-    <router-link :to="{name:'about',query:{id:123,name:'张三'}}">About</router-link>
+    <!-- <router-link to="/">Home</router-link> |
+    <router-link :to="{name:'about',query:{id:123,name:'张三'}}">About</router-link> -->
   </nav>
   <router-view></router-view>
 </template>
