@@ -5,9 +5,13 @@
 
 <script>
 import { reactive, toRefs } from 'vue'
+<<<<<<< HEAD
 import { getRequest } from '@/utils/api.js'
 import { ElMessage } from 'element-plus'
 import { useRouter } from 'vue-router'
+=======
+
+>>>>>>> 2f23b43c9ce07f30a643138b17cb987bb63ecdce
 import Layout from '@/components/Layout.vue'   //引入子组件
 
 export default {
@@ -17,6 +21,7 @@ export default {
         const state = reactive({
             count: 0,
         })
+<<<<<<< HEAD
         const router = useRouter()
     // 退出登录方法
         const loginOut = () => {
@@ -29,6 +34,11 @@ export default {
     return {
       ...toRefs(state),
       loginOut
+=======
+    
+    return {
+      ...toRefs(state),
+>>>>>>> 2f23b43c9ce07f30a643138b17cb987bb63ecdce
     }
   }
 }

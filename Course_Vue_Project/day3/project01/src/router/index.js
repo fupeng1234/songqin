@@ -15,7 +15,33 @@ const routes = [
   {
     path: '/',
     name: 'home',
+<<<<<<< HEAD
     component: Home
+=======
+    component: Home,
+    children:[
+      {
+        path: 'cases',
+        name: 'cases',
+        component: () => import('../views/pages/Cases.vue')
+      },
+      {
+        path: 'requests',
+        name: 'requests',
+        component: () => import('../views/pages/Requests.vue')
+      },
+      {
+        path: 'plans',
+        name: 'plans',
+        component: () => import('../views/pages/Plans.vue')
+      },
+      {
+        path: 'reports',
+        name: 'reports',
+        component: () => import('../views/pages/Reports.vue')
+      },
+    ]
+>>>>>>> 2f23b43c9ce07f30a643138b17cb987bb63ecdce
   },
   {
     path: '/login',

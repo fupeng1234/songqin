@@ -4,7 +4,11 @@
       <el-header><NavBar></NavBar></el-header>
       <el-container>
         <el-aside width="200px"><SideBar></SideBar></el-aside>
+<<<<<<< HEAD
         <el-main>内容区</el-main>
+=======
+        <el-main><router-view></router-view></el-main>
+>>>>>>> 2f23b43c9ce07f30a643138b17cb987bb63ecdce
       </el-container>
     </el-container>
   </div>
